@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:super_dash/audio/audio.dart';
-import 'package:super_dash/settings/settings.dart';
+import 'package:super_dash/settings/settings_controller.dart';
 
 class _MockSettingsController extends Mock implements SettingsController {}
 

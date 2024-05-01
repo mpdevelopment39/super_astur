@@ -1,9 +1,10 @@
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:super_dash/constants/constants.dart';
+import 'package:super_dash/constants/urls.dart';
 import 'package:super_dash/game/game.dart';
-import 'package:super_dash/game_intro/game_intro.dart';
+import 'package:super_dash/game_intro/widgets/bottom_bar.dart';
+import 'package:super_dash/game_intro/widgets/game_intro_buttons.dart';
 import 'package:super_dash/gen/assets.gen.dart';
 import 'package:super_dash/l10n/l10n.dart';
 import 'package:url_launcher/url_launcher.dart';

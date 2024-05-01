@@ -8,7 +8,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:leaderboard_repository/leaderboard_repository.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:super_dash/l10n/l10n.dart';
-import 'package:super_dash/leaderboard/leaderboard.dart';
+import 'package:super_dash/leaderboard/bloc/leaderboard_bloc.dart';
+import 'package:super_dash/leaderboard/view/leaderboard_page.dart';
 import 'package:super_dash/score/score.dart';
 
 import '../../helpers/helpers.dart';

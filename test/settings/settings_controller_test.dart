@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:super_dash/settings/persistence/persistence.dart';
-import 'package:super_dash/settings/settings.dart';
+import 'package:super_dash/settings/persistence/settings_persistence.dart';
+import 'package:super_dash/settings/settings_controller.dart';
 
 class _MockSettingsPersistence extends Mock implements SettingsPersistence {}
 

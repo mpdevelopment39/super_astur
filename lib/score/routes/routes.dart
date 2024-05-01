@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:super_dash/leaderboard/leaderboard.dart';
+import 'package:super_dash/leaderboard/view/leaderboard_page.dart';
 import 'package:super_dash/score/game_over/game_over.dart';
 import 'package:super_dash/score/score.dart';
 

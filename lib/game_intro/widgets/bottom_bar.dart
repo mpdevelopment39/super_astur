@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:super_dash/constants/constants.dart';
-import 'package:super_dash/game_intro/game_intro.dart';
+import 'package:super_dash/constants/urls.dart';
+import 'package:super_dash/game_intro/widgets/game_intro_buttons.dart';
 import 'package:super_dash/l10n/l10n.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 

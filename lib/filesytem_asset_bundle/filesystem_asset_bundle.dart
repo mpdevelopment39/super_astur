@@ -12,17 +12,14 @@ class FileSystemAssetBundle extends AssetBundle {
   @override
   Future<ByteData> load(String key) async {
     final filePath = path.join(rootPath, key);
-
     final file = File(filePath);
-
     return file.readAsBytesSync().buffer.asByteData();
   }
 
   @override
   Future<T> loadStructuredData<T>(
     String key,
-    Future<T> Function(String value) parser,
-  ) {
+    Future<T> Function(String value) parser,) {
     return loadString(key).then(parser);
   }
 }

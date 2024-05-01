@@ -7,7 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:super_dash/audio/audio.dart';
 import 'package:super_dash/game/super_dash_game.dart';
-import 'package:super_dash/map_tester/map_tester.dart';
+import 'package:super_dash/map_tester/view/map_tester_view.dart';
 import 'package:super_dash/settings/settings_controller.dart';
 
 import '../../helpers/helpers.dart';

@@ -2,10 +2,10 @@ import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:super_dash/game_intro/game_intro.dart';
-import 'package:super_dash/leaderboard/leaderboard.dart';
+import 'package:super_dash/game_intro/game_instructions/view/game_instructions_overlay.dart';
+import 'package:super_dash/game_intro/view/game_info_dialog.dart';
+import 'package:super_dash/leaderboard/view/leaderboard_page.dart';
 import 'package:super_dash/settings/settings_controller.dart';
-
 class AudioButton extends StatelessWidget {
   const AudioButton({super.key});
 

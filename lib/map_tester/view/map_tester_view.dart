@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:file_selector/file_selector.dart';
 import 'package:flame/game.dart';
 import 'package:flutter/foundation.dart';
@@ -7,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:super_dash/filesytem_asset_bundle/filesystem_asset_bundle.dart';
 import 'package:super_dash/game/game.dart';
-import 'package:super_dash/map_tester/map_tester.dart';
+import 'package:super_dash/map_tester/view/atlases_view.dart';
 import 'package:super_dash/settings/settings_controller.dart';
 
 typedef GetDirectoryPath = Future<String?> Function();

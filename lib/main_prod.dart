@@ -9,8 +9,8 @@ import 'package:super_dash/app/app.dart';
 import 'package:super_dash/audio/audio.dart';
 import 'package:super_dash/bootstrap.dart';
 import 'package:super_dash/firebase_options_prod.dart';
-import 'package:super_dash/settings/persistence/persistence.dart';
-import 'package:super_dash/settings/settings.dart';
+import 'package:super_dash/settings/persistence/local_storage_settings_persistence.dart';
+import 'package:super_dash/settings/settings_controller.dart';
 import 'package:super_dash/share/share.dart';
 
 void main() async {
