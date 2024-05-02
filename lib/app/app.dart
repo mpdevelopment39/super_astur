@@ -1,3 +1,5 @@
+// ignore_for_file: lines_longer_than_80_chars
+
 import 'package:app_ui/app_ui.dart';
 import 'package:authentication_repository/authentication_repository.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +9,7 @@ import 'package:super_dash/app_lifecycle/app_lifecycle.dart';
 import 'package:super_dash/audio/audio.dart';
 import 'package:super_dash/game_intro/view/game_intro_page.dart';
 import 'package:super_dash/l10n/l10n.dart';
-import 'package:super_dash/map_tester/view/map_tester_view.dart';
+import 'package:super_dash/map_tester/map_tester_view.dart';
 import 'package:super_dash/settings/settings_controller.dart';
 import 'package:super_dash/share/share.dart';
 
@@ -36,30 +38,18 @@ class App extends StatelessWidget {
         providers: [
           RepositoryProvider<AudioController>(
             create: (context) {
-              final lifecycleNotifier =
-                  context.read<ValueNotifier<AppLifecycleState>>();
-              return audioController
-                ..attachLifecycleNotifier(lifecycleNotifier);
+              final lifecycleNotifier = context.read<ValueNotifier<AppLifecycleState>>();
+              return audioController..attachLifecycleNotifier(lifecycleNotifier);
             },
             lazy: false,
           ),
-          RepositoryProvider<SettingsController>.value(
-            value: settingsController,
-          ),
-          RepositoryProvider<ShareController>.value(
-            value: shareController,
-          ),
-          RepositoryProvider<AuthenticationRepository>.value(
-            value: authenticationRepository..signInAnonymously(),
-          ),
-          RepositoryProvider<LeaderboardRepository>.value(
-            value: leaderboardRepository,
-          ),
+          RepositoryProvider<SettingsController>.value(value: settingsController),
+          RepositoryProvider<ShareController>.value(value: shareController),
+          RepositoryProvider<AuthenticationRepository>.value(value: authenticationRepository..signInAnonymously()),
+          RepositoryProvider<LeaderboardRepository>.value(value: leaderboardRepository),
         ],
         child: MaterialApp(
-          theme: ThemeData(
-            textTheme: AppTextStyles.textTheme,
-          ),
+          theme: ThemeData(textTheme: AppTextStyles.textTheme),
           supportedLocales: AppLocalizations.supportedLocales,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           home: isTesting ? const MapTesterView() : const GameIntroPage(),

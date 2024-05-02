@@ -12,8 +12,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:leap/leap.dart';
 import 'package:super_dash/audio/audio.dart';
+import 'package:super_dash/game/entities/enemy.dart';
+import 'package:super_dash/game/entities/item.dart';
+import 'package:super_dash/game/entities/player.dart';
 import 'package:super_dash/game/game.dart';
-import 'package:super_dash/score/score.dart';
+import 'package:super_dash/score/view/score_page.dart';
 
 bool _tsxPackingFilter(Tileset tileset) {
   return !(tileset.source ?? '').startsWith('anim');

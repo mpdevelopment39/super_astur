@@ -3,6 +3,7 @@ import 'package:flame_tiled/flame_tiled.dart';
 import 'package:flutter/material.dart';
 import 'package:leap/leap.dart';
 import 'package:pathxp/pathxp.dart';
+import 'package:super_dash/game/behaviors/follow_path_behavior.dart';
 import 'package:super_dash/game/game.dart';
 
 enum EnemyType {
@@ -15,28 +16,21 @@ enum EnemyType {
   unknown;
 
   static EnemyType fromValue(String value) {
-    if (value == 'Butterfly') {
-      return EnemyType.butterfly;
-    } else if (value == 'Beetle') {
-      return EnemyType.bettle;
-    } else if (value == 'Bee') {
-      return EnemyType.bee;
-    } else if (value == 'Grasshopper') {
-      return EnemyType.grasshopper;
-    } else if (value == 'Firefly') {
-      return EnemyType.firefly;
-    } else if (value == 'Ant') {
-      return EnemyType.ant;
+    switch(value){
+      case 'Butterfly': return EnemyType.butterfly;
+      case 'Beetle': return EnemyType.bettle;
+      case 'Bee': return EnemyType.bee;
+      case 'Grasshopper': return EnemyType.grasshopper;
+      case 'Firefly': return EnemyType.firefly;
+      case 'Ant': return EnemyType.ant;
+      default : return EnemyType.unknown;
     }
-    return EnemyType.unknown;
   }
 }
 
 class Enemy extends PhysicalEntity<SuperDashGame> {
-  Enemy({
-    required this.tiledObject,
-    this.enemyDamage = 1,
-  })  : type = EnemyType.fromValue(
+  Enemy({required this.tiledObject,this.enemyDamage = 1,})  
+  : type = EnemyType.fromValue(
           (tiledObject.properties.byName['Type'] as StringProperty?)?.value ??
               '',
         ),

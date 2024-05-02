@@ -15,7 +15,6 @@ final class ScoreInitialsUpdated extends ScoreEvent {
   const ScoreInitialsUpdated({required this.character, required this.index});
 
   final String character;
-
   final int index;
 }
 

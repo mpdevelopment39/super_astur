@@ -6,10 +6,9 @@ import 'package:super_dash/score/bloc/score_bloc.dart';
 import 'package:super_dash/score/routes/routes.dart';
 
 class ScorePage extends StatelessWidget {
-  const ScorePage({
-    required this.score,
-    super.key,
-  });
+  const ScorePage({required this.score,super.key,});
+
+  final int score;
 
   static PageRoute<void> route({required int score}) {
     return PageRouteBuilder(
@@ -17,7 +16,6 @@ class ScorePage extends StatelessWidget {
     );
   }
 
-  final int score;
 
   @override
   Widget build(BuildContext context) {

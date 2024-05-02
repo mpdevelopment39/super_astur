@@ -1,8 +1,7 @@
 import 'dart:async';
-
 import 'package:flame_behaviors/flame_behaviors.dart';
 import 'package:flutter/widgets.dart';
-import 'package:super_dash/game/game.dart';
+import 'package:super_dash/game/entities/player.dart';
 
 class PlayerControllerBehavior extends Behavior<Player> {
   @visibleForTesting

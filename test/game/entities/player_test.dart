@@ -10,6 +10,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:leap/leap.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:super_dash/audio/audio.dart';
+import 'package:super_dash/game/entities/player.dart';
 import 'package:super_dash/game/game.dart';
 
 class _MockImage extends Mock implements Image {}

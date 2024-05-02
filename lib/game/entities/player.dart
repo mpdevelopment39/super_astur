@@ -6,6 +6,10 @@ import 'package:flame_tiled/flame_tiled.dart';
 import 'package:flutter/widgets.dart';
 import 'package:leap/leap.dart';
 import 'package:super_dash/audio/audio.dart';
+import 'package:super_dash/game/behaviors/player_controller_behavior.dart';
+import 'package:super_dash/game/behaviors/player_state_behavior.dart';
+import 'package:super_dash/game/entities/enemy.dart';
+import 'package:super_dash/game/entities/item.dart';
 import 'package:super_dash/game/game.dart';
 
 class Player extends JumperCharacter<SuperDashGame> {

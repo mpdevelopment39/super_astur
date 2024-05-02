@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flame/components.dart';
+import 'package:super_dash/game/entities/item.dart';
 import 'package:super_dash/game/game.dart';
 
 class ItemEffect extends SpriteAnimationComponent

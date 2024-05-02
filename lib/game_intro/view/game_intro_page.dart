@@ -2,7 +2,7 @@ import 'package:app_ui/app_ui.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:super_dash/constants/urls.dart';
-import 'package:super_dash/game/game.dart';
+import 'package:super_dash/game/view/game_view.dart';
 import 'package:super_dash/game_intro/widgets/bottom_bar.dart';
 import 'package:super_dash/game_intro/widgets/game_intro_buttons.dart';
 import 'package:super_dash/gen/assets.gen.dart';

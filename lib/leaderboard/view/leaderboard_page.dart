@@ -1,3 +1,4 @@
+// ignore_for_file: lines_longer_than_80_chars
 import 'package:app_ui/app_ui.dart';
 import 'package:flame/cache.dart';
 import 'package:flame/image_composition.dart';
@@ -7,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:leaderboard_repository/leaderboard_repository.dart';
-import 'package:super_dash/game/game.dart';
+import 'package:super_dash/game/widgets/game_background.dart';
 import 'package:super_dash/gen/assets.gen.dart';
 import 'package:super_dash/l10n/l10n.dart';
 import 'package:super_dash/leaderboard/bloc/leaderboard_bloc.dart';
@@ -16,25 +17,14 @@ import 'package:super_dash/score/score.dart';
 enum LeaderboardStep { gameIntro, gameScore }
 
 class LeaderboardPage extends StatelessWidget {
-  const LeaderboardPage({
-    this.step = LeaderboardStep.gameIntro,
-    super.key,
-  });
+  const LeaderboardPage({this.step = LeaderboardStep.gameIntro,super.key});
 
-  static Page<void> page([
-    LeaderboardStep step = LeaderboardStep.gameScore,
-  ]) {
-    return MaterialPage(
-      child: LeaderboardPage(step: step),
-    );
+  static Page<void> page([LeaderboardStep step = LeaderboardStep.gameScore]) {
+    return MaterialPage(child: LeaderboardPage(step: step));
   }
 
-  static PageRoute<void> route([
-    LeaderboardStep step = LeaderboardStep.gameIntro,
-  ]) {
-    return PageRouteBuilder(
-      pageBuilder: (_, __, ___) => LeaderboardPage(step: step),
-    );
+  static PageRoute<void> route([LeaderboardStep step = LeaderboardStep.gameIntro]) {
+    return PageRouteBuilder(pageBuilder: (_, __, ___) => LeaderboardPage(step: step));
   }
 
   final LeaderboardStep step;
@@ -51,10 +41,7 @@ class LeaderboardPage extends StatelessWidget {
 }
 
 class LeaderboardView extends StatelessWidget {
-  const LeaderboardView({
-    required this.step,
-    super.key,
-  });
+  const LeaderboardView({required this.step,super.key});
 
   final LeaderboardStep step;
 
@@ -133,8 +120,7 @@ class Leaderboard extends StatelessWidget {
       child: BlocBuilder<LeaderboardBloc, LeaderboardState>(
         builder: (context, state) => switch (state) {
           LeaderboardInitial() => const SizedBox.shrink(),
-          LeaderboardLoading() =>
-            const Center(child: LeaderboardLoadingWidget()),
+          LeaderboardLoading() => const Center(child: LeaderboardLoadingWidget()),
           LeaderboardError() => const Center(child: LeaderboardErrorWidget()),
           LeaderboardLoaded(entries: final entries) =>
             LeaderboardContent(entries: entries),
@@ -299,12 +285,8 @@ class _LeaderboardEntries extends StatelessWidget {
               Text(l10n.gameScoreLabel(entry.score)),
             ],
           ),
-          titleTextStyle: textTheme.titleMedium?.copyWith(
-            fontWeight: FontWeight.bold,
-          ),
-          leadingAndTrailingTextStyle: textTheme.titleMedium?.copyWith(
-            fontWeight: FontWeight.bold,
-          ),
+          titleTextStyle: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+          leadingAndTrailingTextStyle: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
         );
       },
     );

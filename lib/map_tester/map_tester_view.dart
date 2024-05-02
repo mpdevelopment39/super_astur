@@ -5,8 +5,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:super_dash/filesytem_asset_bundle/filesystem_asset_bundle.dart';
+import 'package:super_dash/game/entities/player.dart';
 import 'package:super_dash/game/game.dart';
-import 'package:super_dash/map_tester/view/atlases_view.dart';
+import 'package:super_dash/map_tester/atlases_view.dart';
 import 'package:super_dash/settings/settings_controller.dart';
 
 typedef GetDirectoryPath = Future<String?> Function();
@@ -32,14 +33,12 @@ class MapTesterView extends StatefulWidget {
 class _MapTesterViewState extends State<MapTesterView> {
   SuperDashGame? game;
   String? rootPath;
-
   double? speed;
   double? jumpImpulse;
 
   @override
   void initState() {
     super.initState();
-
     final settings = context.read<SettingsController>();
     settings.muted.value = true;
     settings.musicOn.value = false;
@@ -88,9 +87,7 @@ class _MapTesterViewState extends State<MapTesterView> {
       );
     }
 
-    setState(() {
-      game = newGame;
-    });
+    setState(() => game = newGame);
 
     // So we know for sure that everything is loaded and added.
     await widget.timer();
@@ -126,7 +123,7 @@ class _MapTesterViewState extends State<MapTesterView> {
 
   void _setJumpImpulse(double newValue) {
     game?.player?.minJumpImpulse =
-        (game?.player?.world.gravity ?? 0) * newValue;
+      (game?.player?.world.gravity ?? 0) * newValue;
   }
 
   @override

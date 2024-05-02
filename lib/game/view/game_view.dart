@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:super_dash/audio/audio.dart';
 import 'package:super_dash/game/game.dart';
+import 'package:super_dash/game/widgets/game_background.dart';
+import 'package:super_dash/game/widgets/score_label.dart';
+import 'package:super_dash/game/widgets/tap_to_jump_overlay.dart';
 import 'package:super_dash/game_intro/widgets/game_intro_buttons.dart';
 
 class Game extends StatelessWidget {

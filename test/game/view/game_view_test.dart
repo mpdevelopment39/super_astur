@@ -6,6 +6,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:super_dash/game/game.dart';
+import 'package:super_dash/game/view/game_view.dart';
+import 'package:super_dash/game/widgets/score_label.dart';
 import 'package:super_dash/l10n/l10n.dart';
 import 'package:super_dash/settings/settings_controller.dart';
 
